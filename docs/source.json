@@ -1,0 +1,16 @@
+{
+  "source_notebook": "Agent_Based_Market_Modelling(ABMM).ipynb",
+  "sha256": "094238eeb4217a9a4e6e745e23563aae5aa257df8811d071a11309dffa9dbc52",
+  "cells": {
+    "types": 0,
+    "order_book": 1,
+    "market": 2,
+    "pipeline": 3,
+    "gjerstad_dickhaut": 4,
+    "roth_erev": 7,
+    "zero_intelligence": 9,
+    "constraints": 11,
+    "mixed_market": 13,
+    "head_to_head": 16
+  }
+}

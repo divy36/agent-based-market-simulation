@@ -1,0 +1,27 @@
+======================================================================
+EXPERIMENT 2 - FULLY MIXED MARKET
+======================================================================
+
+RQ1: Market-level comparison
+       condition  n_trades_mean  ...  total_surplus_mean  total_surplus_std
+0        GD-only          212.6  ...           31976.006           5449.491
+1      Mixed-All         1835.6  ...          176935.122          20400.616
+2  RothErev-only         4026.6  ...          444608.888          63614.624
+3       ZIC-only         2004.2  ...          236393.261          28184.111
+
+[4 rows x 13 columns]
+
+RQ2: Agent-level outcomes in the fully mixed market
+  agent_label  profit_mean  ...  surplus_share_mean  surplus_share_std
+0          GD       58.450  ...               0.000              0.001
+1   Roth-Erev    14540.516  ...               0.083              0.047
+2        ZI-C     7517.925  ...               0.042              0.028
+
+[3 rows x 7 columns]
+Saved: experiment2_mixed_market.png
+
+Surplus capture in Mixed-All:
+  agent_label   mean    std
+0          GD  0.002  0.004
+1   Roth-Erev  0.663  0.068
+2        ZI-C  0.335  0.067

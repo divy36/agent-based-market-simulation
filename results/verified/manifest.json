@@ -1,0 +1,33 @@
+{
+  "mode": "full",
+  "python": "3.9.6",
+  "experiments": {
+    "constraints": {
+      "status": "passed",
+      "seconds": 88.57,
+      "rows": [
+        6,
+        180
+      ],
+      "overrides": {}
+    },
+    "mixed_market": {
+      "status": "passed",
+      "seconds": 3.98,
+      "rows": [
+        20,
+        480
+      ],
+      "overrides": {}
+    },
+    "head_to_head": {
+      "status": "passed",
+      "seconds": 26.05,
+      "rows": [
+        50,
+        1200
+      ],
+      "overrides": {}
+    }
+  }
+}

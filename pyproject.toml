@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "agent-based-market-simulation"
+version = "0.1.0"
+description = "Double-auction market simulation with zero-intelligence and adaptive agents"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "pandas>=2", "scipy>=1.10", "matplotlib>=3.7"]
+[project.optional-dependencies]
+test = ["pytest>=8"]
+[project.scripts]
+market-sim = "market_sim.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

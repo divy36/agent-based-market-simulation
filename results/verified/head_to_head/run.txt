@@ -1,0 +1,27 @@
+=================================================================
+Experiment 3 - Head-to-Head: ZI-C vs Roth-Erev vs GD
+  4 agents per type per side | 50 runs | 1000 ticks
+=================================================================
+  Completed 10/50 runs...
+  Completed 20/50 runs...
+  Completed 30/50 runs...
+  Completed 40/50 runs...
+  Completed 50/50 runs...
+
+ Agent-level summary (run-level means and 95% CI)
+agent_type  mean_profit  profit_ci  mean_trades  trades_ci  mean_apt  apt_ci  surplus_share%
+        GD       381.97      99.13         2.63       0.66     87.75   10.63             0.5
+ Roth-Erev     42892.25    2743.91       788.66      15.79     51.52    2.96            64.1
+      ZI-C     23651.40    1858.06       407.41      16.42     51.78    2.53            35.4
+
+ Market-level summary
+  n_trades              : 4794.82 ± 103.40
+  avg_trade_price       : 99.02 ± 1.83
+  price_volatility      : 24.51 ± 1.00
+  mean_spread           : 40.20 ± 1.95
+  efficiency            : 44.18 ± 1.45
+
+── Pairwise significance (one-sided paired t-test, Holm-corrected) ─
+  GD > ZI-C                 gap=-23269.44  p_raw=1.0000  p_Holm=1.0000  ✗ not sig
+  GD > Roth-Erev            gap=-42510.29  p_raw=1.0000  p_Holm=1.0000  ✗ not sig
+  Roth-Erev > ZI-C          gap=+19240.85  p_raw=0.0000  p_Holm=0.0000  ✓ sig

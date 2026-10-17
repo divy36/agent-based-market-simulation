@@ -1,0 +1,44 @@
+============================================================
+Experiment 1: ZI-C vs ZI-U - Effect of N & Constraint
+============================================================
+  Running ZI-C, N=100 (30 runs)... efficiency=24.7%  ✓
+  Running ZI-C, N=500 (30 runs)... efficiency=27.4%  ✓
+  Running ZI-C, N=1000 (30 runs)... efficiency=28.0%  ✓
+  Running ZI-U, N=100 (30 runs)... efficiency=7.3%  ✓
+  Running ZI-U, N=500 (30 runs)... efficiency=1.6%  ✓
+  Running ZI-U, N=1000 (30 runs)... efficiency=3.1%  ✓
+
+Results Table 
+Agent    N  Efficiency (%)  Efficiency CI  Volatility  Volatility CI  Mean Spread  Spread CI
+ ZI-C  100           24.74           0.48        7.03           0.18        12.34       0.33
+ ZI-C  500           27.44           0.19        4.60           0.08         9.29       0.14
+ ZI-C 1000           27.98           0.17        4.24           0.07         8.87       0.14
+ ZI-U  100            7.31           2.51       23.65           0.36        47.96       0.67
+ ZI-U  500            1.64           1.29       22.87           0.36        43.74       0.64
+ ZI-U 1000            3.14           1.27       22.79           0.30        43.89       0.57
+
+Key Finding
+  ZI-C avg efficiency       : 26.7%
+  ZI-U avg efficiency       : 4.0%
+  Mean paired gap           : 22.69 pp
+  Gap 95% CI                : ±0.90 pp
+  One-sided t-statistic     : 49.345
+  One-sided p-value         : 0.0000  (H1: ZI-C > ZI-U)
+
+  Per-N significance (one-sided paired t-test, Holm-corrected):
+    N= 100: gap=17.43 pp, p_raw=0.0000, p_Holm=0.0000  ✓ sig
+    N= 500: gap=25.80 pp, p_raw=0.0000, p_Holm=0.0000  ✓ sig
+    N=1000: gap=24.84 pp, p_raw=0.0000, p_Holm=0.0000  ✓ sig
+
+Sensitivity Check: Efficiency Normalisation
+  Primary metric  : realised / (max_surplus_per_tick × n_ticks), clipped to [0, 100]
+  Alternative     : realised / (max_surplus_per_tick × ticks_with_trades)
+
+  ZI-C:  primary=26.7%   conditional=26.7%
+  ZI-U:  primary=4.0%   conditional=4.0%
+
+  Gap under alternative metric: 22.70 pp  (p=0.0000)
+  Positive significant alternative gap: True
+
+Conclusion
+  → H1 SUPPORTED: ZI-C > ZI-U at every N, Holm-corrected one-sided p < 0.05.
